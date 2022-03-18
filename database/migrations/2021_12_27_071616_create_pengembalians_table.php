@@ -15,6 +15,7 @@ class CreatePengembaliansTable extends Migration
     {
         Schema::create('pengembalians', function (Blueprint $table) {
             $table->id();
+            $table->string('tanggal_peminjaman');
             $table->string('tanggal_pengembalian');
             $table->string('denda');
             $table->integer('jumlah');
@@ -26,10 +27,10 @@ class CreatePengembaliansTable extends Migration
             $table->foreign('anggota_id')
             ->references('id')
             ->on('anggotas');
-            $table->bigInteger('petugas_id')->unsigned();
-            $table->foreign('petugas_id')
+            $table->bigInteger('peminjaman_id')->unsigned();
+            $table->foreign('peminjaman_id')
             ->references('id')
-            ->on('petugas');
+            ->on('pinjams');
             $table->timestamps();
         });
     }

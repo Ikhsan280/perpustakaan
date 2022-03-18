@@ -56,7 +56,7 @@ class BukuController extends Controller
         $buku->penerbit_buku = $request->penerbit_buku;
         $buku->tahun_penerbit = $request->tahun_penerbit;
         $buku->stok = $request->stok;
-        Alert::success('data '.$buku->judul_buku.'Berhasil Ditambahkan');
+        Alert::success('data '.$buku->judul_buku.' Berhasil Ditambahkan');
         $buku->save();
         
 
@@ -115,7 +115,7 @@ class BukuController extends Controller
         $buku->penerbit_buku = $request->penerbit_buku;
         $buku->tahun_penerbit = $request->tahun_penerbit;
         $buku->stok = $request->stok;
-        Alert::success('data '.$buku->judul_buku.'Berhasil Diedit');
+        Alert::success('data '.$buku->judul_buku.' Berhasil Diedit');
         $buku->save();
         return redirect()->route('buku.index');
 

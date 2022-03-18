@@ -140,7 +140,7 @@ class PinjamController extends Controller
         $buku->stok += $pinjam->jumlah ;
         $pinjam->delete();
         $buku->save() ;
-        alert::success('Mantap','Data berhasil dihapus');
+        alert::success('Mantap','Buku Telah Dikembalikan');
         return redirect()->route('peminjaman.index');
     }
 }
